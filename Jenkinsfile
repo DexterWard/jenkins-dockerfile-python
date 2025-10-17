@@ -30,7 +30,7 @@ pipeline {
    post {
         always {
             echo 'Pipeline completed.'
-            docker rmi apasoft/temperatures
+            sh 'docker rmi apasoft/temperatures'
         }
         success {
             echo 'Pipeline executed successfully.'
